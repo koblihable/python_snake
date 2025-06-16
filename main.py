@@ -45,7 +45,6 @@ while game_on:
 
     for segment in snake.snake[1:]:
         if snake.head.distance(segment) <= 10:
-            print("i'm the reason")
             game_on = False
             scoreboard.game_over()
 
