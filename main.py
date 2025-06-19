@@ -28,8 +28,6 @@ while game_on:
     screen.update()
     time.sleep(0.1)
     snake.snake_move()
-    print(snake.head.xcor())
-    print(snake.head.ycor())
 
     if snake.head.distance(food) <= 15:
         food.move_food()
@@ -38,8 +36,6 @@ while game_on:
         snake.extend()
 
     if snake.head.xcor() > 450 or snake.head.xcor() < -450 or snake.head.ycor() > 450 or snake.head.ycor() < -450:
-        print(snake.head.xcor())
-        print(snake.head.ycor())
         game_on = False
         scoreboard.game_over()
 
